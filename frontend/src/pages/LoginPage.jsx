@@ -19,11 +19,10 @@ const LoginPage = () => {
   }
 
   return (
-    <div className='min-h-screen grid lg:grid-cols-2'>
       <div className='flex flex-col items-center justify-center p-6 sm:p-12'>
         <div className='w-full max-w-[300px] space-y-8'>
           <div className='text-center mb-8'>
-              <h1 className='text-2xl text-primary font-bold mt-2'>Login Account</h1>
+              <h1 className='text-2xl text-indigo-600 font-bold mt-2'>Login Account</h1>
           </div>
 
           {/* Form */}
@@ -52,13 +51,13 @@ const LoginPage = () => {
               {isError && <p className='text-red-400'>{isError}</p>}
               
             </div>
-            <button disabled={isLoggingIn} className='w-full btn btn-primary rounded-lg'>
+            <button disabled={isLoggingIn} className='w-full btn bg-indigo-600 rounded-lg'>
               {isLoggingIn ? (
                 <>
                   <Loader className='size-5 animate-spin'/>
                 </>
               ) : (
-                "Login"
+                <p className='text-white'>Login</p>
               )}
             </button>
           </form>
@@ -66,13 +65,12 @@ const LoginPage = () => {
           <div className='flex items-center justify-center gap-1'>
             <p>Don't have an account?</p>
             <Link to={'/signup'}>
-              <button className='text-primary underline'>Sign up</button>
+              <button className='text-indigo-600 underline'>Sign up</button>
             </Link>
           </div>
 
         </div>
       </div>
-    </div>
   )
 }
 
