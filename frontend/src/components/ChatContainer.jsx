@@ -25,10 +25,9 @@ const ChatContainer = () => {
     }
   }, [messages])
 
-  if(isMessagesLoading) return <div className='font-light'>Loading...</div>
 
   return (
-    <div className='flex-1 flex flex-col overflow-auto'>
+    <div className='flex-1 flex flex-col border-r border-slate-300 overflow-auto'>
       <ChatHeader />
 
       <div className='flex-1 overflow-y-auto p-4 space-y-4'>
@@ -45,7 +44,7 @@ const ChatContainer = () => {
             <div className='chat-header mb-1'>
               <time className='text-xs opacity-50 ml-1'>{formatMessageTime(message.createdAt)}</time>
             </div>
-            <div className='chat-bubble flex flex-col'>
+            <div className='chat-bubble bg-slate-200/60 flex flex-col'>
               {message.image && (
                 <img src={message.image} alt="image" className='sm:max-w-[200px] rounded-md mb-2'/>
               )}

@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className='w-full overflow-hidden'>
-      <div className='flex items-center justify-center px-3 sm:px-6'>
+      <div className='flex items-center justify-center'>
         <div className='max-w-[1280px] w-full'>
           <Navbar />
         </div>

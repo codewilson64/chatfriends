@@ -13,11 +13,9 @@ const Sidebar = () => {
     getUsers()
   }, [getUsers])
 
-  if(isUsersLoading) return <div className='font-light'>Loading...</div>
-
   return (
-    <div className='h-full w-20 lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200'>
-      <div className='border-b border-base-300 w-full p-5'>
+    <div className='h-full w-20 lg:w-72 border-r border-l border-slate-300 flex flex-col transition-all duration-200'>
+      <div className='border-b border-slate-300 w-full p-5'>
         <div className='flex items-center justify-center lg:gap-2'>
           <Users className='size-6'/>
           <span className='font-medium hidden lg:block'>Contacts</span>

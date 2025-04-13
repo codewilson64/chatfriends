@@ -44,7 +44,7 @@ const MessageInput = () => {
             <img src={imagePreview} alt="preview" className='size-20 object-cover rounded-lg border border-zinc-700'/>
             <button 
               onClick={removeImage} 
-              className='absolute -top-1.5 -right-1.5 size-5 rounded-full bg-base-300 flex items-center justify-center'
+              className='absolute -top-1.5 -right-1.5 size-5 rounded-full bg-zinc-200 flex items-center justify-center'
             >
               <X className='size-3'/>
             </button>
@@ -56,7 +56,7 @@ const MessageInput = () => {
         <div className='flex-1 flex items-center gap-2'>
           <input 
             type="text" 
-            className='w-full input input-bordered rounded-lg input-sm sm:input-md'
+            className='w-full border border-gray-300 py-2 px-3 outline-none rounded-lg input-sm sm:input-md'
             placeholder='Type a message...'
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -70,7 +70,7 @@ const MessageInput = () => {
           />
           <button
             type='button'
-            className={`flex btn btn-circle ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
+            className={`flex btn bg-zinc-200/50 btn-circle ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
             onClick={() => fileRef.current.click()}
           >
             <Image size={20}/>

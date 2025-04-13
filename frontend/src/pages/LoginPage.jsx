@@ -29,7 +29,7 @@ const LoginPage = () => {
           <form onSubmit={handleLogin} className='space-y-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col relative'>
-                <label className='mb-2'>Username:</label>
+                <label className='mb-2'>Username: <span className='font-bold'>user</span></label>
                 <input 
                   className='border border-gray-500 px-3 py-2 outline-none rounded-lg'
                   type="text" 
@@ -39,7 +39,7 @@ const LoginPage = () => {
               </div>
              
               <div className='flex flex-col'>
-                <label className='mb-2'>Password:</label>
+                <label className='mb-2'>Password: <span className='font-bold'>abcABC123#</span></label>
                 <input
                   className='border border-gray-500 px-3 py-2 outline-none rounded-lg' 
                   type="password"

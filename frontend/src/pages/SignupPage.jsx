@@ -25,7 +25,7 @@ const SignupPage = () => {
         <div className='w-full max-w-[300px] space-y-8'>
           <div className='text-center mb-8'>
             <div className='flex flex-col items-center gap-2 group'>
-              <h1 className='text-2xl font-bold mt-2'>Create Account</h1>
+              <h1 className='text-2xl text-indigo-600 font-bold mt-2'>Create Account</h1>
               <p className='text-base-content-60'>Get started with your free account</p>
             </div>
           </div>
@@ -71,13 +71,13 @@ const SignupPage = () => {
               </div>
             </div>
             {isError && <p className='text-red-400'>{isError}</p>}
-            <button disabled={isSigningUp} className='w-full btn btn-primary rounded-lg'>
+            <button disabled={isSigningUp} className='w-full btn bg-indigo-600 rounded-lg'>
               {isSigningUp ? (
                 <>
                   <Loader className='size-5 animate-spin'/>
                 </>
               ) : (
-                "Create Account"
+                <p className='text-white'>Create Account</p>
               )}
             </button>
           </form>
@@ -85,7 +85,7 @@ const SignupPage = () => {
           <div className='flex items-center justify-center gap-1'>
             <p>Already have an account?</p>
             <Link to={'/login'}>
-              <button className='text-primary underline'>Sign in</button>
+              <button className='text-indigo-600 underline'>Sign in</button>
             </Link>
           </div>
 
